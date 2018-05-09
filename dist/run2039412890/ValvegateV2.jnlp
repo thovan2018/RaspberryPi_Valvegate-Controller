@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ValvegateV2.jnlp">
+  <information>
+    <title>ValvegateV2</title>
+    <vendor>admin</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/SecondPreloader.jar" size="80403" download="progress" />
+    <jar href="ValvegateV2.jar" size="778392" download="eager" />
+    <jar href="lib/junit.jar" size="314932" download="eager" />
+    <jar href="lib/pi4j-core-javadoc.jar" size="1344664" download="eager" />
+    <jar href="lib/pi4j-core-sources.jar" size="799440" download="eager" />
+    <jar href="lib/pi4j-core.jar" size="751174" download="eager" />
+    <jar href="lib/pi4j-device-javadoc.jar" size="1380848" download="eager" />
+    <jar href="lib/pi4j-device-sources.jar" size="269270" download="eager" />
+    <jar href="lib/pi4j-device.jar" size="235173" download="eager" />
+    <jar href="lib/pi4j-example-javadoc.jar" size="620523" download="eager" />
+    <jar href="lib/pi4j-example-sources.jar" size="291295" download="eager" />
+    <jar href="lib/pi4j-example.jar" size="289085" download="eager" />
+    <jar href="lib/pi4j-gpio-extension-javadoc.jar" size="320348" download="eager" />
+    <jar href="lib/pi4j-gpio-extension-sources.jar" size="98399" download="eager" />
+    <jar href="lib/pi4j-gpio-extension.jar" size="96408" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ValvegateV2" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="valvegate.Valvegate"  name="ValvegateV2"  preloader-class="secondpreloader.SecondPreloader"/>
+  <update check="always"/>
+</jnlp>
