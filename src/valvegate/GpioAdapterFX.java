@@ -40,7 +40,7 @@ public class GpioAdapterFX {
     private BooleanProperty pin6StateProperty;
     private BooleanProperty pin7StateProperty;
     
-    private BooleanProperty pin8StateProperty;      //modified
+    private BooleanProperty pin8StateProperty;
     private BooleanProperty pin9StateProperty;
     private BooleanProperty pin10StateProperty;
     private BooleanProperty pin11StateProperty;
@@ -58,12 +58,11 @@ public class GpioAdapterFX {
     private BooleanProperty pin22StateProperty;
     private BooleanProperty pin23StateProperty;
     
-    //modified
     private GpioPinDigitalOutput pin0, pin1, pin2, pin3, pin4, pin5, pin6, pin7, 
             pin8, pin9, pin10, pin11, pin12, pin13, pin14, pin15,
             pin16, pin17, pin18, pin19, pin20, pin21, pin22, pin23;
     
-    private GpioPinDigitalOutput[] pinIndex;  //modified
+    //private GpioPinDigitalOutput[] pinIndex;
     private BooleanProperty pin27StateProperty;
     
     private Timeline testTimeline, testTimeline1, testTimeline2, testTimeline3, testTimeline4, 
@@ -93,7 +92,7 @@ public class GpioAdapterFX {
         pin6StateProperty = new SimpleBooleanProperty(Boolean.FALSE);
         pin7StateProperty = new SimpleBooleanProperty(Boolean.FALSE);
         
-        pin8StateProperty = new SimpleBooleanProperty(Boolean.FALSE);   //modified
+        pin8StateProperty = new SimpleBooleanProperty(Boolean.FALSE);
         pin9StateProperty = new SimpleBooleanProperty(Boolean.FALSE);
         pin10StateProperty = new SimpleBooleanProperty(Boolean.FALSE);
         pin11StateProperty = new SimpleBooleanProperty(Boolean.FALSE);
@@ -113,7 +112,7 @@ public class GpioAdapterFX {
         
         pin27StateProperty = new SimpleBooleanProperty(Boolean.FALSE);
                 
-        stateProperties = new BooleanProperty[]{pin0StateProperty,            //modifed
+        stateProperties = new BooleanProperty[]{pin0StateProperty,
             pin1StateProperty, pin2StateProperty, pin3StateProperty,
             pin4StateProperty, pin5StateProperty, pin6StateProperty,
             pin7StateProperty, pin8StateProperty, pin9StateProperty,
@@ -124,12 +123,13 @@ public class GpioAdapterFX {
             pin22StateProperty, pin23StateProperty
         };
         
-        pinIndex = new GpioPinDigitalOutput[]{pin0, pin1, pin2, pin3, pin4,   //modified
+        /*
+        pinIndex = new GpioPinDigitalOutput[]{pin0, pin1, pin2, pin3, pin4,
             pin5, pin6, pin7, pin8, pin9,
             pin10, pin11, pin12, pin13, pin14,
             pin15, pin16, pin17, pin18, pin19, 
             pin20, pin21, pin22, pin23
-        };
+        };*/
         
         timeline = new Timeline[]{testTimeline1,
         testTimeline2,
@@ -146,7 +146,15 @@ public class GpioAdapterFX {
             pins.put(statePropertie, null);
         }
         //pins.put(pin27StateProperty, null);
-        
+        /*
+        pins.put(pin0StateProperty, null);
+        pins.put(pin1StateProperty, null);
+        pins.put(pin2StateProperty, null);
+        pins.put(pin3StateProperty, null);
+        pins.put(pin4StateProperty, null);
+        pins.put(pin5StateProperty, null);
+        pins.put(pin6StateProperty, null);
+        pins.put(pin7StateProperty, null);*/
     }
     
     
@@ -201,7 +209,7 @@ public class GpioAdapterFX {
         pin6 = GPIO.provisionDigitalOutputPin(RaspiPin.GPIO_06, "PIN6", PinState.LOW);
         pin7 = GPIO.provisionDigitalOutputPin(RaspiPin.GPIO_07, "PIN7", PinState.LOW);
         
-        pin8 = GPIO.provisionDigitalOutputPin(RaspiPin.GPIO_08, "PIN8", PinState.LOW);      //modified
+        pin8 = GPIO.provisionDigitalOutputPin(RaspiPin.GPIO_08, "PIN8", PinState.LOW);
         pin9 = GPIO.provisionDigitalOutputPin(RaspiPin.GPIO_09, "PIN9", PinState.LOW);
         pin10 = GPIO.provisionDigitalOutputPin(RaspiPin.GPIO_10, "PIN10", PinState.LOW);
         pin11 = GPIO.provisionDigitalOutputPin(RaspiPin.GPIO_11, "PIN11", PinState.LOW);
@@ -240,11 +248,38 @@ public class GpioAdapterFX {
         addGpioInputListener(myContact, pin27StateProperty);
  
         // create Listener for DigitalOuputPin
-        for(int i=0; i<24; i++){                                                //modified                                                     
-            pins.put(stateProperties[i], createPinListener(pinIndex[i]));
-        }
+        //for(int i=0; i<24; i++){
+        //    pins.put(stateProperties[i], createPinListener(pinIndex[i]));
+        //}
         
-               
+        
+        pins.put(pin0StateProperty, createPinListener(pin0));
+        pins.put(pin1StateProperty, createPinListener(pin1));
+        pins.put(pin2StateProperty, createPinListener(pin2));
+        pins.put(pin3StateProperty, createPinListener(pin3));
+        pins.put(pin4StateProperty, createPinListener(pin4));
+        pins.put(pin5StateProperty, createPinListener(pin5));
+        pins.put(pin6StateProperty, createPinListener(pin6));
+        pins.put(pin7StateProperty, createPinListener(pin7));
+        
+        pins.put(pin8StateProperty, createPinListener(pin0));
+        pins.put(pin9StateProperty, createPinListener(pin1));
+        pins.put(pin10StateProperty, createPinListener(pin2));
+        pins.put(pin11StateProperty, createPinListener(pin3));
+        pins.put(pin12StateProperty, createPinListener(pin4));
+        pins.put(pin13StateProperty, createPinListener(pin5));
+        pins.put(pin14StateProperty, createPinListener(pin6));
+        pins.put(pin15StateProperty, createPinListener(pin7));
+        
+        pins.put(pin16StateProperty, createPinListener(pin0));
+        pins.put(pin17StateProperty, createPinListener(pin1));
+        pins.put(pin18StateProperty, createPinListener(pin2));
+        pins.put(pin19StateProperty, createPinListener(pin3));
+        pins.put(pin20StateProperty, createPinListener(pin4));
+        pins.put(pin21StateProperty, createPinListener(pin5));
+        pins.put(pin22StateProperty, createPinListener(pin6));
+        pins.put(pin23StateProperty, createPinListener(pin7));
+        
         
         for (BooleanProperty statePropertie : stateProperties) {
             statePropertie.addListener(pins.get(statePropertie));
@@ -523,7 +558,7 @@ public class GpioAdapterFX {
         return pin7StateProperty;
     }
     
-    public BooleanProperty gpio8StateProperty() {       //modified
+    public BooleanProperty gpio8StateProperty() {
         return pin0StateProperty;
     }
 
