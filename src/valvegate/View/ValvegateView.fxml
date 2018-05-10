@@ -36,7 +36,7 @@
         <URL value="@valvegateview.css" />
     </stylesheets>
    <children>
-      <TabPane layoutX="74.0" layoutY="71.0" prefHeight="480.0" prefWidth="800.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TabPane layoutX="74.0" layoutY="71.0" prefHeight="480.0" prefWidth="800.0" side="BOTTOM" stylesheets="@../style/valvegateview.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
           <Tab fx:id="Tab01" text="Configuration">
             <content>
@@ -67,13 +67,17 @@
                                              <GridPane.margin>
                                                 <Insets top="5.0" />
                                              </GridPane.margin></Rectangle>
-                                          <GridPane alignment="CENTER" hgap="5.0" prefHeight="384.0" prefWidth="545.0" vgap="2.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                          <GridPane fx:id="ftGridpane" alignment="CENTER" hgap="5.0" prefHeight="384.0" prefWidth="545.0" vgap="2.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="61.0" />
-                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="122.0" />
-                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="122.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="122.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="122.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="61.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="61.0" />
                                             </columnConstraints>
                                             <rowConstraints>
                                                 <RowConstraints maxHeight="60.0" minHeight="8.0" prefHeight="14.0" vgrow="SOMETIMES" />
@@ -101,7 +105,7 @@
                                                       <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T4" GridPane.rowIndex="3" />
                                                    </children>
                                                 </GridPane>
-                                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <GridPane GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                   </columnConstraints>
@@ -125,7 +129,7 @@
                                                             <Insets bottom="-2.0" top="-2.0" />
                                                          </padding>
                                                       </TextField>
-                                                      <TextField fx:id="txtgate1T2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="1">
+                                                      <TextField fx:id="txtgate1T2" alignment="CENTER" prefHeight="30.0" prefWidth="86.0" promptText="0" GridPane.rowIndex="1">
                                                          <padding>
                                                             <Insets bottom="-2.0" top="-2.0" />
                                                          </padding>
@@ -142,7 +146,7 @@
                                                       </TextField>
                                                    </children>
                                                 </GridPane>
-                                                <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                <GridPane GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
                                                    <columnConstraints>
                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                    </columnConstraints>
@@ -192,7 +196,7 @@
                                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                    </rowConstraints>
                                                 </GridPane>
-                                                <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                <GridPane GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="2">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                   </columnConstraints>
@@ -225,7 +229,7 @@
                                                       </TextField>
                                                    </children>
                                                 </GridPane>
-                                                <GridPane prefHeight="150.0" prefWidth="90.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                                <GridPane prefHeight="150.0" prefWidth="90.0" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="2">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="111.0" />
                                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="55.0" minWidth="7.0" prefWidth="9.0" />
@@ -259,7 +263,7 @@
                                                       </TextField>
                                                    </children>
                                                 </GridPane>
-                                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                <GridPane GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                   </columnConstraints>
@@ -292,7 +296,7 @@
                                                       </TextField>
                                                    </children>
                                                 </GridPane>
-                                                <GridPane GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                <GridPane GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                   </columnConstraints>
@@ -325,7 +329,7 @@
                                                       </TextField>
                                                    </children>
                                                 </GridPane>
-                                                <GridPane GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                                <GridPane GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="4">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                   </columnConstraints>
@@ -358,7 +362,7 @@
                                                       </TextField>
                                                    </children>
                                                 </GridPane>
-                                                <GridPane GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                                <GridPane GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="4">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="109.0" />
                                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0" minWidth="10.0" prefWidth="11.0" />
@@ -392,23 +396,18 @@
                                                       </TextField>
                                                    </children>
                                                 </GridPane>
-                                                <ToggleButton fx:id="tgglegate1" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                                   <padding>
-                                                      <Insets top="-2.0" />
-                                                   </padding>
-                                                   <font>
-                                                      <Font name="System Bold" size="24.0" />
-                                                   </font>
-                                                </ToggleButton>
-                                                <ToggleButton fx:id="tgglegate2" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                <ToggleButton fx:id="tgglegate1" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
                                                    <padding>
                                                       <Insets top="-2.0" />
                                                    </padding>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
                                                 </ToggleButton>
-                                                <ToggleButton fx:id="tgglegate3" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G3" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                <ToggleButton fx:id="tgglegate2" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G2" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
@@ -416,7 +415,7 @@
                                                       <Insets top="-2.0" />
                                                    </padding>
                                                 </ToggleButton>
-                                                <ToggleButton fx:id="tgglegate4" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                <ToggleButton fx:id="tgglegate3" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G3" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
@@ -424,7 +423,7 @@
                                                       <Insets top="-2.0" />
                                                    </padding>
                                                 </ToggleButton>
-                                                <ToggleButton fx:id="tgglegate5" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                <ToggleButton fx:id="tgglegate4" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G4" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
@@ -432,7 +431,7 @@
                                                       <Insets top="-2.0" />
                                                    </padding>
                                                 </ToggleButton>
-                                                <ToggleButton fx:id="tgglegate6" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                <ToggleButton fx:id="tgglegate5" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
@@ -440,7 +439,7 @@
                                                       <Insets top="-2.0" />
                                                    </padding>
                                                 </ToggleButton>
-                                                <ToggleButton fx:id="tgglegate7" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G7" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                <ToggleButton fx:id="tgglegate6" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G6" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
@@ -448,7 +447,15 @@
                                                       <Insets top="-2.0" />
                                                    </padding>
                                                 </ToggleButton>
-                                                <ToggleButton fx:id="tgglegate8" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G8" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                <ToggleButton fx:id="tgglegate7" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G7" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate8" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="G8" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
@@ -525,10 +532,858 @@
                                     </GridPane>
                                  </content>
                             </Tab>
-                            <Tab text="Set 2">
+                              <Tab text="Set 2">
                                  <content>
-                                    <AnchorPane prefHeight="426.0" prefWidth="750.0" />
-                                 </content></Tab>
+                                    <GridPane prefHeight="473.0" prefWidth="750.0">
+                                       <children>
+                                          <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ff893b" height="405.0" stroke="#ff4e0d" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="5.0" width="739.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                                          <GridPane fx:id="ftGridpane2" alignment="CENTER" hgap="5.0" prefHeight="402.0" prefWidth="724.0" vgap="2.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                             <children>
+                                                <GridPane GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T2" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T3" GridPane.rowIndex="2" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T4" GridPane.rowIndex="3" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField alignment="CENTER" promptText="0">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate9T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate9T2" alignment="CENTER" prefHeight="30.0" prefWidth="86.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate9T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate9T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField fx:id="txtgate10T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate10T2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate10T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate10T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T2" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T3" GridPane.rowIndex="2" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T4" GridPane.rowIndex="3" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField fx:id="txtgate11T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate11T2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate11T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate11T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane prefHeight="150.0" prefWidth="90.0" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField fx:id="txtgate12T1" alignment="CENTER" prefHeight="30.0" prefWidth="105.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate12T2" alignment="CENTER" prefHeight="30.0" prefWidth="102.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate12T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate12T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate13T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate13T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate13T2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate13T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate14T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate14T1" alignment="CENTER" prefHeight="30.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate14T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate14T2" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate15T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate15T1" alignment="CENTER" prefHeight="30.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate15T2" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate15T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate16T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate16T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate16T1" alignment="CENTER" prefHeight="30.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate16T2" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <ToggleButton fx:id="tgglegate9" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G9" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate10" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G10" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate11" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G11" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate12" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G12" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate13" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G13" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate14" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G14" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate15" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G15" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate16" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G16" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                                             </columnConstraints>
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Glow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="60.0" minHeight="8.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="60.0" minHeight="8.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="607.0" minWidth="10.0" prefWidth="544.0" />
+                                          <ColumnConstraints />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="313.0" minHeight="8.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="313.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Set 3">
+                                 <content>
+                                    <GridPane prefHeight="473.0" prefWidth="750.0">
+                                       <children>
+                                          <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ff893b" height="405.0" stroke="#ff4e0d" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="5.0" width="739.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                                          <GridPane fx:id="ftGridpane3" alignment="CENTER" hgap="5.0" prefHeight="402.0" prefWidth="724.0" vgap="2.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                             <children>
+                                                <GridPane GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T2" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T3" GridPane.rowIndex="2" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T4" GridPane.rowIndex="3" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField alignment="CENTER" promptText="0">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate17T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate17T2" alignment="CENTER" prefHeight="30.0" prefWidth="86.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate17T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate17T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField fx:id="txtgate18T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate18T2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate18T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate18T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T2" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T3" GridPane.rowIndex="2" />
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="T4" GridPane.rowIndex="3" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField fx:id="txtgate19T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate19T2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate19T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate19T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane prefHeight="150.0" prefWidth="90.0" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <TextField fx:id="txtgate20T1" alignment="CENTER" prefHeight="30.0" prefWidth="105.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate20T2" alignment="CENTER" prefHeight="30.0" prefWidth="102.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate20T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate20T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate21T4" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate21T3" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate21T2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate21T1" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate22T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate22T1" alignment="CENTER" prefHeight="30.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate22T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate22T2" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate23T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate23T1" alignment="CENTER" prefHeight="30.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate23T2" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate23T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <TextField fx:id="txtgate24T4" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="3">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate24T3" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="2">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate24T1" alignment="CENTER" prefHeight="30.0" promptText="0">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="txtgate24T2" alignment="CENTER" prefHeight="30.0" promptText="0" GridPane.rowIndex="1">
+                                                         <padding>
+                                                            <Insets bottom="-2.0" top="-2.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <ToggleButton fx:id="tgglegate17" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G17" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate18" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G18" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate19" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G19" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate20" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G20" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate21" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G21" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate22" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G22" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate23" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G23" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="tgglegate24" alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="G24" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="-2.0" />
+                                                   </padding>
+                                                </ToggleButton>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="61.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                                             </columnConstraints>
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Glow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="60.0" minHeight="8.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="60.0" minHeight="8.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="607.0" minWidth="10.0" prefWidth="544.0" />
+                                          <ColumnConstraints />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="313.0" minHeight="8.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="313.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </content>
+                              </Tab>
                           </tabs>
                         </TabPane>
                      </children>
@@ -559,17 +1414,12 @@
                                           <Label fx:id="lblcount" alignment="CENTER" layoutX="619.0" layoutY="39.0" prefHeight="30.0" prefWidth="106.0" />
                                           <Label fx:id="lblActiveGate" alignment="CENTER" layoutX="580.0" layoutY="75.0" prefHeight="30.0" prefWidth="146.0" />
                                           <Label fx:id="lblSignalType" alignment="CENTER" layoutX="581.0" layoutY="113.0" prefHeight="30.0" prefWidth="146.0" />
-                                          <ImageView fitHeight="286.0" fitWidth="732.0" layoutX="27.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="286.0" fitWidth="722.0" layoutX="22.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../Sequence.jpg" />
                                              </image>
                                           </ImageView>
                                        </children></AnchorPane>
-                              </content>
-                            </Tab>
-                            <Tab text="Group 2">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                               </content>
                             </Tab>
                           </tabs>
@@ -708,10 +1558,6 @@
                </graphic>
             </Tab>
         </tabs>
-         <stylesheets>
-            <URL value="@../valvegateview.css" />
-            <URL value="@../style/valvegateview.css" />
-         </stylesheets>
       </TabPane>
    </children>
 </AnchorPane>
