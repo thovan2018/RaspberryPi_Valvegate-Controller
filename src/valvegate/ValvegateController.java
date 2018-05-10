@@ -605,7 +605,9 @@ public class ValvegateController implements Initializable {
                 }
             });
         }
-        
+        // Set Default item for ListView
+        //dataList.
+        SessionList.setItems(dataList);
         
         // Display time
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {            
